@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# non-working previous versions
+src/components/ButtonsActions0js.js
+src/components/CounterForm0.js
+src/components/ManyForms0.js
+src/components/ManyForms1.js

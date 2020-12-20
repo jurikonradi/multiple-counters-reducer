@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap')
+
+$breakpoint-mobile-small: 320px
+$breakpoint-mobile: 370px
+$breakpoint-tablet: 700px
+$breakpoint-desktop: 700px
+$breakpoint-desktop-hd: 1500px
+
+*
+  padding: 0
+
+body
+  font-family: 'Jost', sans-serif
+  font-weight: 500
+
+.form-container
+  width: 100%
+  display: grid
+  margin: 15px 0
+  border-bottom: 1px solid #c1ccd3
+
+// iPhone 8 and more
+@media (min-width: $breakpoint-mobile)
+  .form-container
+    grid-template: 1fr 1fr / 1fr
+    margin: 10px 0
+
+// Desktop
+@media (min-width: $breakpoint-desktop)
+  .form-container
+    grid-template: 1fr / 1fr 1fr
+    border: none
+
+.flex
+  display: flex
+  justify-content: space-between
+
+.input-area, button
+  height: 50px
+  border-radius: 25px
+
+.input-area
+  font-size: 1em
+  color: #5f6b73
+  padding: 0 20px 0
+  border: 1px solid #ced6db
+  background-color: #d7e0e6
+  font-family: 'Jost', sans-serif
+  font-weight: 500
+  align-self: center
+  margin: 0px 10px 10px
+.input-area:focus, button:focus
+  outline: 0
+  border: 1px solid #ff9100
+
+button
+  padding: 10px 20px 12px
+  width: 100%
+
+// iPhone 8 and more
+@media (min-width: $breakpoint-mobile)
+  button
+    padding: 10px 30px 12px
+
+// Desktop
+@media (min-width: $breakpoint-desktop)
+  button
+    padding: 0
+
+button
+  height: 50px
+  border: 1px solid #1f96f3
+  margin: 0 10px 10px
+  color: #1f96f3
+  text-transform: uppercase
+  font-family: 'Jost', sans-serif
+  font-weight: 500
+  font-size: 1em
+  letter-spacing: .125em
+  background: none
+button:hover
+  background-color: #bce0f7
+button:active
+  color: #13598f
+  background-color: #9bc3de
+// button:focus
+//   outline: 0
+//   border: 1px solid #ffa600
+
+.save
+  color: white
+  background-color: #1f96f3
+.save:hover
+  background-color: #45afff
+.save:active
+  color: white
+  background-color: #1b7fcc
+
+.restore
+  color: #303b43
+  background-color: #edf3f7
+.restore:hover
+  background-color: #bce0f7
+.restore:active
+  background-color: #9bc3de
+.restore:disabled
+  background-color: #f7fcff
+  color: #b6cddd
+
+.save, .restore
+  width: auto
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(122,122,122,0.5)
+  -moz-box-shadow: 0px 3px 3px 0px rgba(122,122,122,0.5)
+  box-shadow: 0px 3px 3px 0px rgba(122,122,122,0.5)
+  border: none
