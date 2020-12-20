@@ -32,6 +32,9 @@ function reducer(formsData, action) {
       return [...formsData, newForm()];
     case "save-forms":
       return formsData.map((form) => {
+        if (form.savedValue === "") {
+          form.savedValue = 0;
+        }
         return { ...form, restoredValue: form.savedValue };
       });
     case "restore-forms":
