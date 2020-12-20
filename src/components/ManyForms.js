@@ -47,7 +47,7 @@ function reducer(formsData, action) {
 }
 
 function newForm() {
-  return { id: Date.now(), savedValue: "", restoredValue: 0 };
+  return { id: Date.now(), savedValue: "", restoredValue: "" };
 }
 
 function ManyForms() {
@@ -55,7 +55,7 @@ function ManyForms() {
     {
       id: Date.now(),
       savedValue: "",
-      restoredValue: 0,
+      restoredValue: "",
     },
   ]);
 
@@ -82,7 +82,7 @@ function ManyForms() {
         <button
           className="restore"
           type="button"
-          disabled={formsData[0].restoredValue === 0}
+          disabled={formsData[0].restoredValue === ""}
           onClick={() => dispatch({ type: "restore-forms" })}
         >
           Restore

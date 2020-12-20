@@ -27,7 +27,7 @@ function CounterForm({ form, dispatch }) {
         className="input-area"
         type="text"
         pattern="[0-9]*"
-        inputmode="numeric"
+        inputMode="numeric"
         placeholder="Enter number"
         value={form.savedValue}
         onChange={handleChange}
